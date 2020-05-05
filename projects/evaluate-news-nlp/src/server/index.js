@@ -1,23 +1,32 @@
-var path = require('path')
-const express = require('express')
-const mockAPIResponse = require('./mockAPI.js')
+const dotenv = require("dotenv");
+dotenv.config();
+let path = require("path");
+const express = require("express");
+const mockAPIResponse = require("./mockAPI.js");
+const aylien = require("aylien_textapi");
 
-const app = express()
+const app = express();
 
-app.use(express.static('dist'))
+var textapi = new aylien({
+  application_id: process.env.API_ID,
+  application_key: process.env.API_KEY,
+});
 
-console.log(__dirname)
+app.use(express.static("dist"));
 
-app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'))
-})
+console.log(__dirname);
+
+app.get("/", function (req, res) {
+  // res.sendFile('dist/index.html')
+  res.sendFile(path.resolve("dist/index.html"));
+});
 
 // designates what port the app will listen to for incoming requests
-app.listen(8080, function () {
-    console.log('Example app listening on port 8080!')
-})
+let port = process.env.PORT || 5000;
+app.listen(port, function () {
+  console.log(`Example app listening on port ${port ? port : 5000}!`);
+});
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
-})
+app.get("/test", function (req, res) {
+  res.send(mockAPIResponse);
+});
