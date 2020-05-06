@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require("path"); //why in grey
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
