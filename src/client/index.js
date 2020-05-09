@@ -1,4 +1,4 @@
-import { checkForName } from "./js/nameChecker";
+import { checkTextSentiment } from "./js/checkTextSentiment";
 import { handleSubmit } from "./js/formHandler";
 
 import "./styles/resets.scss";
@@ -7,9 +7,8 @@ import "./styles/footer.scss";
 import "./styles/form.scss";
 import "./styles/header.scss";
 
-console.log(checkForName);
+console.log(checkTextSentiment);
 
-alert("I EXIST");
-console.log("CHANGE!!");
+// console.log("CHANGE!!");
 
-export { checkForName, handleSubmit };
+export { checkTextSentiment, handleSubmit };
