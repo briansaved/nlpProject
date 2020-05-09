@@ -22,9 +22,9 @@ app.get("/", function (req, res) {
 });
 
 // designates what port the app will listen to for incoming requests
-let port = process.env.PORT || 5000;
+let port = process.env.PORT || 8081;
 app.listen(port, function () {
-  console.log(`Example app listening on port ${port ? port : 5000}!`);
+  console.log(`Example app listening on port ${port ? port : 8081}!`);
 });
 
 app.get("/test", function (req, res) {
