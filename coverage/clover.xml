@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1589085861492" clover="3.2.0">
+  <project timestamp="1589085861492" name="All files">
+    <metrics statements="27" coveredstatements="4" conditionals="6" coveredconditionals="0" methods="10" coveredmethods="2" elements="43" coveredelements="6" complexity="0" loc="27" ncloc="27" packages="1" files="2" classes="2"/>
+    <file name="displayData.js" path="C:\Users\brian\OneDrive\Documents\2020Udacity\NLP\fend\projects\evaluate-news-nlp\src\client\js\displayData.js">
+      <metrics statements="18" coveredstatements="3" conditionals="6" coveredconditionals="0" methods="6" coveredmethods="1"/>
+      <line num="2" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="27" count="1" type="cond" truecount="0" falsecount="2"/>
+      <line num="28" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="45" count="0" type="stmt"/>
+      <line num="47" count="0" type="stmt"/>
+      <line num="48" count="0" type="stmt"/>
+      <line num="49" count="0" type="stmt"/>
+      <line num="51" count="0" type="stmt"/>
+      <line num="56" count="1" type="stmt"/>
+    </file>
+    <file name="formHandler.js" path="C:\Users\brian\OneDrive\Documents\2020Udacity\NLP\fend\projects\evaluate-news-nlp\src\client\js\formHandler.js">
+      <metrics statements="9" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <line num="2" count="0" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

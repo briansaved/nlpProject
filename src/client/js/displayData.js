@@ -1,10 +1,10 @@
 function checkTextSentiment(inputText) {
-  inputText == "" || inputText.length > 50
+  inputText == "" || inputText.length > 50 //Validate that there is input
     ? alert("Enter Text up to 50 Characters")
-    : postData("http://localhost:8080/add", { extract: inputText }).then(() => {
-        getData("http://localhost:8080/sentiment").then((data) => {
+    : postData("http://localhost:8081/add", { extract: inputText }).then(() => {
+        getData("http://localhost:8081/sentiment").then((data) => {
           console.log("::: Analysing Text :::", inputText);
-          console.log("This is the data from the server ", data);
+          console.log("This is the data from the server ", data); //Dev only,log data
           document.getElementById("response").innerHTML = `
           <h2>Results</h2>
           <p>Text Analysed:  ${data.text}</p>
@@ -17,11 +17,13 @@ function checkTextSentiment(inputText) {
           confident about this.
             </p>
             <p></p>
-          `;
+          `; //express porarity and subjectity as a %
         });
       });
+  displayData(); //confirm Function runs to the end
 }
 
+//Posting Data Function for API analysis
 const postData = async (url = "", data = {}) => {
   const response = await fetch(url, {
     method: "POST",
@@ -38,6 +40,7 @@ const postData = async (url = "", data = {}) => {
   }
 };
 
+//Get Data function after API call
 const getData = async (url) => {
   const apiData = await fetch(url);
 
@@ -49,4 +52,8 @@ const getData = async (url) => {
   }
 };
 
-export { checkTextSentiment };
+function displayData() {
+  console.log("Dom Successfully Updated");
+}
+
+export { checkTextSentiment, displayData };

@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin"); //default with webpack 4
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
   entry: "./src/client/index.js",
@@ -55,5 +56,6 @@ module.exports = {
       //utputs the CSS files in separate folders
       filename: "[name]-[contentHash].css",
     }),
+    new WorkboxPlugin.GenerateSW(), //Service worker
   ],
 };
