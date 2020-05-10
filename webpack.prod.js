@@ -44,6 +44,7 @@ module.exports = {
       },
     }),
     new CleanWebpackPlugin({
+      root: path.resolve(__dirname, "dist"),
       // Simulate the removal of files
       dry: true,
       // Write Logs to Console
